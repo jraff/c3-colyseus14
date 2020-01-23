@@ -6,7 +6,8 @@
   "scripts": {
     "schema-codegen": "schema-codegen src/server/rooms/*.ts --ts --output src/client/schema/",
     "heroku-postbuild": "tsc && webpack",
-    "start": "node ./lib/index.js",
+    "start": "node node_modules/ts-node/dist/bin/ts-node.js server.ts"
+    // "start": "node ./lib/index.js",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
