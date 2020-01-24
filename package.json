@@ -6,7 +6,7 @@
   "scripts": {
     "schema-codegen": "schema-codegen src/server/rooms/*.ts --ts --output src/client/schema/",
     "heroku-postbuild": "tsc && webpack",
-    "start": "node node_modules/ts-node/dist/bin.js ./src/server/index.ts",
+    "start": "DEBUG=colyseus:* node node_modules/ts-node/dist/bin.js ./src/server/index.ts",
     "startXXX": "node ./lib/index.js",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
