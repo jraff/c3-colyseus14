@@ -36,7 +36,7 @@ export class ArenaRoom extends Room<State> {
     if (command === "sendJSON")
       {
         console.log("sendJSON")
-        this.broadcast({type: "sendJSON", data: data}, { except: client });
+        this.broadcast({type: "sendJSON", data: JSON.stringify(data)}, { except: client });
       }
   }
 
