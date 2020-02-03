@@ -16,7 +16,7 @@ export class Entity extends Schema {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.json = {};
+        this.json = "dog";
     }
 
     static distance(a: Entity, b: Entity) {
