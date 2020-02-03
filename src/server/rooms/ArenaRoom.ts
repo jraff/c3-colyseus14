@@ -32,6 +32,11 @@ export class ArenaRoom extends Room<State> {
       entity.speed = (dst < 20) ? 0 : Math.min(dst / 15, 4);
       entity.angle = Math.atan2(entity.y - data.y, entity.x - data.x);
     }
+    
+    if (command === "sendJSON")
+      {
+        this.broadcast("sendJSON", { except: client });
+      }
   }
 
   onLeave(client: Client) {
