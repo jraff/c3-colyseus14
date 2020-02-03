@@ -4,6 +4,7 @@ export class Entity extends Schema {
     @type("float64") x: number;
     @type("float64") y: number;
     @type("float32") radius: number;
+    @type("string") json : string
 
     dead: boolean = false;
     angle: number = 0;
@@ -15,6 +16,7 @@ export class Entity extends Schema {
         this.x = x;
         this.y = y;
         this.radius = radius;
+        this.json = {};
     }
 
     static distance(a: Entity, b: Entity) {
