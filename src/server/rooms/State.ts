@@ -17,7 +17,7 @@ export class State extends Schema {
 
   initialize () {
     // create some food entities
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 0; i++) {
       this.createFood();
     }
   }
