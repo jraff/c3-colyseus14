@@ -27,7 +27,6 @@ export class ArenaRoom extends Room<State> {
       const dst = Entity.distance(entity, message as Entity);
       entity.speed = (dst < 20) ? 0 : Math.min(dst / 15, 4);
       entity.angle = Math.atan2(entity.y - message.y, entity.x - message.x);
-      console.log(message.x)
     });
 
     this.setSimulationInterval(() => this.state.update());
