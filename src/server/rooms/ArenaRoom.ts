@@ -14,7 +14,7 @@ export class ArenaRoom extends Room<State> {
     this.state.initialize();
 
     this.onMessage("mouse", (client, messageString) => {
-      console.log(messageString)
+      const message = JSON.parse(messageString)
       const entity = this.state.entities[client.sessionId];
 
       // skip dead players
