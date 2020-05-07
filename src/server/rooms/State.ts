@@ -5,7 +5,7 @@ import { Entity } from "./Entity";
 import { Player } from "./Player";
 
 const WORLD_SIZE = 2000;
-export const DEFAULT_PLAYER_RADIUS = 20;
+export const DEFAULT_PLAYER_RADIUS = 10;
 
 export class State extends Schema {
 
