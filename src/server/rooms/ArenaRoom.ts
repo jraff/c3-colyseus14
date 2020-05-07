@@ -15,7 +15,8 @@ export class ArenaRoom extends Room<State> {
     this.state.createPlayer(client.sessionId);
   }
 
-  onMessage(client: Client, message: any) {
+  onMessage("*", (client, type, message) => {
+  // onMessage(client: Client, message: any) {
     const entity = this.state.entities[client.sessionId];
 
     // skip dead players
