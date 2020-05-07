@@ -15,7 +15,7 @@ export class ArenaRoom extends Room<State> {
     this.state.createPlayer(client.sessionId);
   }
 
-  onMessage("*", (client, type, message) => {
+  onMessage("*", (client: Client, type, message)) {
   // onMessage(client: Client, message: any) {
     const entity = this.state.entities[client.sessionId];
 
@@ -25,7 +25,9 @@ export class ArenaRoom extends Room<State> {
       return;
     }
 
-    const [command, data] = message;
+    // const [command, data] = message;
+    const command = type;
+    const data = message;
 
   // change angle
     if (command === "mouse") {
