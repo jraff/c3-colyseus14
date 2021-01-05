@@ -1,13 +1,8 @@
 import { Room, Client } from "colyseus";
 import { State } from "./State";
 
-interface MouseMessage {
-  x: number;
-  y: number;
-}
 
 export class GameRoom extends Room<State> {
-
   onCreate() {
     this.setState(new State());
 
@@ -21,7 +16,7 @@ export class GameRoom extends Room<State> {
 
   onLeave(client: Client) {
     console.log(client.sessionId, "LEFT!");
-    const entity = this.state.entities[client.sessionId];
+    const entity = this.state.players[client.sessionId];
   }
 
 }
