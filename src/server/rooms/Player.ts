@@ -1,8 +1,9 @@
-import { Entity } from "./Entity";
-import { DEFAULT_PLAYER_RADIUS } from "./State";
-
-export class Player extends Entity {
+export class Player {
     constructor(x: number, y: number) {
-        super(x, y, DEFAULT_PLAYER_RADIUS);
+        super(x, y);
     }
+  move() {
+    this.x = this.x + Math.random() * 8 + 1
+    this.y = this.y + Math.random() * 8 + 1
+  }
 }
